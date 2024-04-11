@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f02aee7328.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+    <title>Product</title>
+</head>
+
+<body>
+    <div class="container1 w-full h-screen grid grid-cols-7">
+
+        <div id="sidebar" class="content-div w-full h-screen  bg-[#ecf0f1] flex flex-col justify-between">
+            <div class="sidebar_top w-[90%] pl-3 sm:pl-5 flex flex-col justify-evenly mt-6 ">
+                <div class="flex flex-row justify-start items-center gap-1 sm:gap-3">
+                    <i class="fa-brands fa-slack text-2xl sm:text-2xl md:text-4xl text-[#702DFF]"></i>
+                    <h1 class="text-black font-bold text-[1rem] md:mt-1 md:text-[1.2rem]">Softlyx</h1>
+                </div>
+
+                <div
+                    class="w-full mt-10 md:w-[100%] my-5 h-8 sm:h-10 bg-[#702DFF] flex flex-row justify-start pl-4 items-center gap-1 md:gap-4 hover:bg-[#3498DB] transition delay-150 rounded-md">
+                    <i class="fa-solid fa-grip-vertical sm:text-lg text-white"></i>
+                    <button
+                        class="text-white text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]"><a href="dashboard.html">Dashboard</a></button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-2 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-brands fa-shopify text-lg"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]"><a href="shop.html">Products</a></button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-2 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-brands fa-first-order"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Orders</button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-2 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-solid fa-tags"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Discount</button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-1 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-solid fa-database"></i>
+                    <button class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]"><a
+                            href="">Activity</a></button>
+                </div>
+            </div>
+
+            <div class="sidebar_down w-[90%] pl-3 sm:pl-5 flex flex-col justify-evenly">
+                <div class="h-10 w-[90%] flex flex-row justify-start items-center gap-2 mb-6 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-regular fa-snowflake w-10 h-6 rounded-l-full rounded-r-full px-3 py-1 bg-white"></i>
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+                <div class="h-10 w-[90%] flex flex-row justify-start items-center gap-3 sm:gap-4 mb-6 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-regular fa-sun"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Settings</button>
+                </div>
+                <div class="h-10 w-[90%] flex flex-row justify-start items-center gap-3 sm:gap-4 mb-6 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i
+                        class="fa-solid fa-question w-5 h-5 border-[2px] border-slate-800 text-center rounded-l-full rounded-r-full"></i>
+                    <button class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]"><a
+                            href="">Help</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="hero" class="content-div col-span-6 w-full h-screen grid grid-rows-[1fr_8fr]">
+            <div class="main_header w-100% h-20 grid grid-cols-[auto_2fr_1fr] bg-[#ecf0f1] items-center">
+
+                <button onclick="toggleMenu()" class="w-10"><i
+                        class="fa-solid fa-bars w-auto mx-auto text-xl"></i></button>
+                <form action="" class="">
+                    <div class="w-full flex flex-row justify-center ">
+                        <input type="text" placeholder="   search"
+                            class=" w-[30rem] h-10 bg-gray-300 rounded-full border-none ">
+                        <i class=""></i>
+                    </div>
+
+                </form>
+                <div class="w-40 h-20 flex flex-row justify-center gap-1">
+                    
+                    <i class="fa-solid fa-bag-shopping text-4xl text-[#f39c12] my-auto "></i>
+                    <p class="text-xl mt-8 font-bold w-14 h-10 text-[#9b59b6]">cart</p>
+                    <label for="" class="w-5 h-5 absolute mr-5 mt-2 text-green-500 font-semibold ">0</label>
+                </div>
+            </div>
+
+            
+            <div class="main-container">
+                <div id=""
+                    class="h-screen overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-4">
+                    <!-- Product items go here -->
+                </div>
+
+                
+
+
+  
+
+            </div>
+            
+
+
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    
+    
+</body>
+
+</html>

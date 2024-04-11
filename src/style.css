@@ -1,0 +1,59 @@
+body {
+    /* background: #000524; */
+    min-height: 100vh;
+  }
+  
+  #wrapper {
+    position: relative;
+    background: #000524;
+    border: 1px solid #000;
+    box-shadow: 0 22px 35px -16px rgba(0, 0, 0, 0.71);
+    min-width: 59rem;
+    margin: 0 auto;
+  }
+  
+  #chart-bar {
+    position: relative;
+    margin-top: -38px;
+  }
+  
+  .link {
+    position: absolute;
+    bottom: 7px;
+    right: 13px;
+    z-index: 10;
+    color: #ccc;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Helvetica, Arial;
+  }
+
+  .range-slider::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    background-color: #f016ae;
+    border-radius: 5px;
+    height: 6px;
+  }
+
+  .range-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border: 2PX solid #6B46C1;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+  }
+
+  .content-div{
+    transition: all 0.3s ease;
+
+  }
+
+  .hidden{
+    display: none;
+  }

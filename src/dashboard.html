@@ -5,164 +5,608 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f02aee7328.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 
     <title>Dashboard</title>
 </head>
 
 <body>
-    <div class="container1 w-full h-screen grid grid-cols-[15%_85%]">
-        <div class="sidebar w-full h-screen bg-blue-700 grid grid-rows-[1fr_4fr]">
-            <div class="w-full mt-12 flex flex-row justify-center gap-2">
-                <img src="images/videvo.png" alt="" class="w-6 h-6 md:w-10 md:h-10">
-                <h1 class="text-white text-lg text-wrap md:text-xl md:mt-1">Dashboard</h1>
+    <div class="container1 w-full h-screen grid grid-cols-7">
+
+        <div id="sidebar" class="content-div w-full h-full  bg-[#ecf0f1] flex flex-col justify-between">
+            <div class="sidebar_top w-[90%] pl-3 sm:pl-5 flex flex-col justify-evenly mt-6 ">
+                <div class="flex flex-row justify-start items-center gap-1 sm:gap-3">
+                    <i class="fa-brands fa-slack text-2xl sm:text-2xl md:text-4xl text-[#702DFF]"></i>
+                    <h1 class="text-black font-bold text-[1rem] md:mt-1 md:text-[1.2rem]">Softlyx</h1>
+                </div>
+
+                <div
+                    class="w-full mt-10  my-5 h-8 sm:h-10 bg-[#702DFF] flex flex-row justify-start items-center gap-1 md:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-solid fa-grip-vertical sm:text-lg text-white"></i>
+                    <button
+                        class="text-white text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Dashboard</button>
+                </div>
+                <div
+                    class="w-[90%]  mx-auto h-14 flex flex-row justify-start items-center gap-2 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-brands fa-shopify text-lg"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]"><a href="shop.html">Products</a></button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-2 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-brands fa-first-order"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Orders</button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-2 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-solid fa-tags"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Discount</button>
+                </div>
+                <div
+                    class="w-[90%] mx-auto h-14 flex flex-row justify-start items-center gap-1 sm:gap-4 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-solid fa-database"></i>
+                    <button class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem] "><a
+                            href="">Activity</a></button>
+                </div>
             </div>
-            <div class="sidebar2 w-full h-[70%] text-white grid grid-rows-5 ">
-                <div class="w-full mx-auto h-16 bg-blue-900 flex flex-row justify-center items-center gap-4">
-                    <span><img src="images/dashboard.png" alt="" class="w-6 h-6 md:w-8"></span>
-                    <label class="text-lg md:text-xl">Dashboard</label>
+
+            <div class="sidebar_down w-[90%] pl-3 sm:pl-5 flex flex-col justify-evenly">
+                <div class="w-[90%] h-10 flex flex-row justify-start items-center gap-2 mb-6 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-regular fa-snowflake w-10 h-6 rounded-l-full rounded-r-full px-3 py-1 bg-white"></i>
+                    <i class="fa-regular fa-moon"></i>
                 </div>
-                <div class="w-full mx-auto h-16 flex flex-row justify-center items-center gap-6">
-                    <span><img src="images/shopping-bag.png" alt="" class="w-8 h-8"></span>
-                    <label class="text-md md:text-xl">Shop</label>
+                <div class="w-[90%] h-10 flex flex-row justify-start items-center gap-3 sm:gap-4 mb-6 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i class="fa-regular fa-sun"></i>
+                    <button
+                        class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]">Settings</button>
                 </div>
-                <div class="w-full mx-auto h-16 flex flex-row justify-center items-center gap-6">
-                    <span><img src="images/shopping-cart.png" alt="" class="w-8 h-8"></span>
-                    <label class="text-md md:text-xl">Orders</label>
-                </div>
-                <div class="w-full mx-auto h-16 flex flex-row justify-center items-center gap-6">
-                    <span><img src="images/offer (1).png" alt="" class="w-8 h-8"></span>
-                    <label class="text-md md:text-xl">Discount</label>
-                </div>
-                <div class="w-full mx-auto h-16 flex flex-row justify-center items-center gap-6">
-                    <span><img src="images/settings (1).png" alt="" class="w-8 h-8"></span>
-                    <label class="text-md md:text-xl">Settings</label>
+                <div class="w-[90%] h-10 flex flex-row justify-start items-center gap-3 sm:gap-4 mb-6 hover:bg-[#3498db] transition delay-200 pl-4 rounded-md">
+                    <i
+                        class="fa-solid fa-question w-5 h-5 border-[2px] border-slate-800 text-center rounded-l-full rounded-r-full"></i>
+                    <button class="text-[0.5rem] xs:text-[0.7rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1rem]"><a
+                            href="">Help</a></button>
                 </div>
             </div>
         </div>
 
-        <div class="main1 w-full h-screen grid grid-rows-[auto_auto_2fr]" style="background: linear-gradient(90deg, #e7e1cf 0%, #c4f3d6 0%); ">
-            <div class="section1_header mt-14 grid grid-cols-3 md:grid-cols-3">
-                <form action="">
-                    <div class="w-full h-10 flex flex-row justify-evenly">
-                        <img src="images/menu.png" alt="" class="w-5 h-5 ml-2">
-                        <input type="text" placeholder="Search" class="w-24 h-7 rounded-sm text-center md:w-full md:ml-2">
+        <div id="hero" class="content-div col-span-6 w-full h-screen grid grid-rows-[1fr_8fr] ">
+            <div class="main_header w-100% h-20 grid grid-cols-[auto_1fr_auto] bg-[#ecf0f1] items-center">
+
+                <button onclick="toggleMenu()"><i
+                        class="fa-solid fa-bars w-auto mx-auto text-xl pl-5"></i></button>
+                <form action="" class="">
+                    <div class="w-full flex flex-row justify-center ">
+                        <input type="text" placeholder="   search"
+                            class=" w-[30rem] h-10 bg-gray-300 rounded-full border-none">
+                        <i class=""></i>
                     </div>
-                </form>
 
-                <form action="">
-                    <div class="w-full h-auto flex flex-row justify-center md:px-4">
-                        <p class="text-gray-600 text-md">show:</p>
-                        <input type="drop" placeholder="This month" class="w-24 h-7 text-center md:w-full">
-                        <select name="" id="" class="w-5 h-7">
-                            <option value=""></option>
-                            <option value="">hello</option>
-                            <option value="">hello</option>
-                        </select>
+                </form>
+                <div class="w-20 mr-10 flex flex-row justify-around">
+                    <i class="fa-regular fa-bell"></i>
+                    <img src="images/person.jpg" alt="" class="w-10 h-10 rounded-full">
+                </div>
+            </div>
+
+            <div class="main2 w-full h-[100%] grid grid-cols-[3fr_1fr]">
+
+                <div class="w-[100%] h-fit flex flex-col ">
+                    <div class="cards_wrapper w-[100%] h-fit flex flex-row justify-evenly py-3">
+
+
+                        <div
+                            class="card_one w-[10rem] sm:w-[17rem] h-[3.5rem] bg-[#3498db] flex flex-row justify-around items-center rounded-l-md rounded-r-md">
+                            <div class="w-8 h-8 bg-white px-2 py-1 rounded-full">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+
+                            <div class="w-auto h-auto text-white">
+                                <p class="text-sm">Target sales</p>
+                                <p class="text-sm">876</p>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-grip-vertical text-white text-2xl"></i>
+                            </div>
+                        </div>
+
+
+
+                        <div
+                            class="card_two w-[10rem] sm:w-[17rem] h-[3.5rem] bg-[#9b59b6] flex flex-row justify-around items-center rounded-l-md rounded-r-md">
+                            <div class="w-8 h-8 bg-white px-2 py-1 rounded-full">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+
+                            <div class="w-auto h-auto text-white">
+                                <p class="text-sm">Target sales</p>
+                                <p class="text-sm">876</p>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-grip-vertical text-white text-2xl"></i>
+                            </div>
+                        </div>
+
+
+
+                        <div
+                            class="card_three w-[12rem] sm:w-[17rem] h-[3.5rem] bg-[#f39c12] flex flex-row justify-around items-center rounded-l-md rounded-r-md">
+                            <div class="w-8 h-8 bg-white px-2 py-1 rounded-full">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+
+                            <div class="w-auto h-auto text-white">
+                                <p class="text-sm">Target sales</p>
+                                <p class="text-sm">876</p>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-grip-vertical text-white text-2xl"></i>
+                            </div>
+                        </div>
+
                     </div>
-                </form>
-                
-                <div class="w-full flex flex-row justify-center md:justify-evenly">
-                    <img src="images/bell.png" alt="" class="w-6 h-6">
-                    <img src="images/email.png" alt="" class="w-6 h-6 ">
-                    <span class="">
-                        <p class=" font-bold text-xl">K.Asamoah</p>
-                        <p class="">Manager</p>
-                    </span>
+
+                    <div id="wrapper" class="chart_container ">
+                        <div id="chart-area">
+
+                        </div>
+                        <div id="chart-bar">
+
+                        </div>
+
+                        <a class="link" href="https://apexcharts.com?ref=codepen">apexcharts.com</a>
+                    </div>
+
+                    <div class="w-[98%] mx-auto h-44 mt-4 flex flex-row justify-between">
+                        <div class="w-72 h-full border border-dashed border-gray-500 rounded-xl">
+                            <div id="chart1" class="w-72 h-[60%]">
+                                
+                            </div>
+                            <div class="w-full h-16 text-center bg-gradient-to-r from-[#702dff] to-[#9b59b6] flex flex-col">
+                                <span class="relative mx-auto font-medium text-white">Management System</span>
+                                <input type="range" class="range-slider mx-auto mt-3" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                        <div class="w-72 h-full border border-dashed border-gray-500 rounded-xl">
+                            <div id="chart2" class="w-72 h-[60%]">
+                                
+                            </div>
+                            <div class="w-full h-16 text-center bg-gradient-to-r from-[#702dff] to-[#9b59b6] flex flex-col">
+                                <span class="relative mx-auto font-medium text-white">Management System</span>
+                                <input type="range" class="range-slider mx-auto mt-3" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                        <div class="w-72 h-full border border-dashed border-gray-500 rounded-xl">
+                            <div id="chart3" class="w-72 h-[60%]">
+                                
+                            </div>
+                            <div class="w-full h-16 text-center bg-gradient-to-r from-[#702dff] to-[#9b59b6] flex flex-col ">
+                                <span class="relative mx-auto font-medium text-white">Management System</span>
+                                <input type="range" class="range-slider mx-auto mt-3" min="0" max="100" step="1" >
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <div class="rightSide w-[100%] h-full bg-[#fff] pt-3">
+                    <div class="w-[90%] h-80 bg-slate-100 mx-auto rounded-lg mb-6">
+                        
+                        <div class="w-full h-10 flex flex-row justify-evenly items-center">
+                            <span>09.00</span>
+                            <span>10.00</span>
+                            <span>11.00</span>
+                            <span>12.00</span>
+                            <span>01.00</span>
+                        </div>
+                        <div class="w-full h-[80%] flex flex-row justify-evenly">
+                            <div class="w-10 flex flex-col justify-evenly border-r-2 ">
+                                <span>Sun</span>
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                            </div>
+                            <div class="w-6 flex flex-col justify-evenly items-center border-r-2">
+                               
+                            </div>
+                            <div class="w-6 flex flex-col justify-evenly items-center border-r-2">
+                               
+                            </div>
+                            <div class="w-6 flex flex-col justify-evenly items-center border-r-2">
+                               
+                            </div>
+                            <div class="w-6 flex flex-col justify-evenly items-center border-r-2">
+                               
+                            </div>
+
+
+                        </div>
+                        <div class="w-28 bg-[#000524] text-center rounded-full relative mt-[-4.5rem] ml-40 text-white ">Team Meating</div>
+                        <div class="w-28 bg-[#702dff] text-center rounded-full relative mt-[-3.6rem] ml-16 text-white ">Team Meating</div>
+                        <div class="w-28 bg-[#9b59b6] text-center rounded-full relative mt-[-3.5rem] ml-40 text-white ">Team Meating</div>
+                        <div class="w-28 bg-[#f39c12] text-center rounded-full relative mt-[-6rem] ml-20 text-white ">Team Meating</div>
+                        
+                    </div>
+
+                    <div class="w-[90%] h-80 bg-slate-100 mx-auto rounded-lg flex flex-col justify-evenly">
+                        <span class="pl-2">
+                            <h1 class="font-bold">Overall Progress</h1>
+                        <p class="text-[0.8rem] text-gray-400">Start from November 20, 2023</p>
+                        </span>
+                        <div id="chart" class="">
+                        </div>
+                        <div class="flex flex-row justify-center gap-2">
+                            <button id="add" class="bg-[#2ecc71] h-6 px-2 rounded-md text-white font-bold text-xs">Add</button>
+                            <button id="remove" class="bg-[#f39c12] h-6 px-2 rounded-md text-white font-bold text-xs">Remove</button>
+                            <button id="randomize" class="bg-[#9b59b6] h-6 px-2 rounded-md text-white font-bold text-xs">Randomise</button>
+                            <button id="reset" class="bg-[#000524] h-6 px-2 rounded-md text-white font-bold text-xs">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-
-            <div class="main2 w-full h-auto grid grid-cols-4 my-5">
-                <div class="w-[94%] h-auto rounded-lg bg-white flex flex-col mx-auto">
-                    <section class="flex flex-row pt-4 justify-evenly">
-                        <div class=" h-auto text-yellow-500 font-bold">
-                            <label for="" class="">$7,400,365</label>
-                             <p>Target</p>
-                        </div>
-                        <div class=""><img src="images/benchmarking.png" alt="" class="w-10"></div>
-                    </section>
-                    <section class="w-full h-auto my-auto">
-                        <input type="range" class="w-[90%] h-2 mx-2 ">
-                    </section>
-                </div>
-
-                <div class="w-[94%] h-auto rounded-lg bg-white grid grid-rows-2 ">
-                    <section class="flex flex-row pt-4 justify-evenly ">
-                        <div class=" h-auto text-blue-700 font-bold">
-                            <label for="" class="">$5,465</label>
-                             <p>Revenue</p>
-                        </div>
-                        <div class=""><img src="images/revenue.png" alt="" class="w-10"></div>
-                    </section>
-                    <section class="w-full h-auto my-auto">
-                        <input type="range" class="w-[90%] h-2 accent-purple-600 mx-2">
-                    </section>
-                </div>
-                <div class="w-[94%] h-auto rounded-lg bg-white grid grid-rows-2 ">
-                    <section class="flex flex-row pt-4 justify-evenly">
-                        <div class=" h-auto text-red-600 font-bold">
-                            <label for="" class="">24.5K</label>
-                             <p>Total Users</p>
-                        </div>
-                        <div class=""><img src="images/user.png" alt="" class="w-10"></div>
-                    </section>
-                    <section class="w-full h-auto my-auto">
-                        <input type="range" class="w-[90%] h-2 mx-2">
-                    </section>
-                </div>
-                <div class="w-[94%] h-auto rounded-lg bg-white grid grid-rows-2 ">
-                    <section class="flex flex-row pt-4 justify-evenly ">
-                        <div class=" h-auto text-green-700 font-bold">
-                            <label for="" class="">8756</label>
-                             <p>Oders</p>
-                        </div>
-                        <div class=""><img src="images/planning.png" alt="" class="w-10"></div>
-                    </section>
-                    <section class="w-full h-auto my-auto">
-                        <input type="range" class="w-[90%] h-2 accent-purple-900 mx-2">
-                    </section>
-                </div>
-            </div>
-
-            <!-- <div class="main3">
-                <div class="">
-                    <h1>New Products</h1>
-                </div>
-                <div>
-                    <table class="table-fixed w-full bg-white shadow-md rounded-lg overflow-hidden">
-                        <thead class="border-slate-600 text-center">
-                            <tr>
-                                <th class="px-4 py-2 border">Photo</th>
-                                <th class="px-4 py-2 border">Product</th>
-                                <th class="px-4 py-2 border">Date</th>
-                                <th class="px-4 py-2 border">Offer</th>
-                                <th class="px-4 py-2 border">Brand</th>
-                                <th class="px-4 py-2 border">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center border-solid black">
-                            <tr>
-                                <td class="px-4 py-2 border"><img src="images/shopping-bag.png" alt="" class="w-12 h-12"></td>
-                                <td class="px-4 py-2 border">Dell laptop</td>
-                                <td class="px-4 py-2 border">24/3/2024</td>
-                                <td class="px-4 py-2 border">200</td>
-                                <td class="px-4 py-2 border">Dell</td>
-                                <td class="px-4 py-2 border">3000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div> -->
-
-            <div id="products-container" class="h-screen overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-4">
-                <!-- Product items go here -->
-            </div>
-            
 
         </div>
 
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+
+        var data = generateDayWiseTimeSeries(new Date("22 Apr 2017").getTime(), 115, {
+            min: 30,
+            max: 90
+        });
+        var options1 = {
+            chart: {
+                id: "chart2",
+                type: "area",
+                height: 250,
+                foreColor: "#ccc",
+                toolbar: {
+                    autoSelected: "pan",
+                    show: false
+                }
+            },
+            colors: ["#00BAEC"],
+            stroke: {
+                width: 3
+            },
+            grid: {
+                borderColor: "#555",
+                clipMarkers: false,
+                yaxis: {
+                    lines: {
+                        show: false
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            fill: {
+                gradient: {
+                    enabled: true,
+                    opacityFrom: 0.55,
+                    opacityTo: 0
+                }
+            },
+            markers: {
+                size: 5,
+                colors: ["#000524"],
+                strokeColor: "#00BAEC",
+                strokeWidth: 3
+            },
+            series: [
+                {
+                    data: data
+                }
+            ],
+            tooltip: {
+                theme: "light"
+            },
+            xaxis: {
+                type: "datetime"
+            },
+            yaxis: {
+                min: 0,
+                tickAmount: 4
+            }
+        };
+
+        var chart1 = new ApexCharts(document.querySelector("#chart-area"), options1);
+
+        chart1.render();
+
+        var options2 = {
+            chart: {
+                id: "chart1",
+                height: 150,
+                type: "bar",
+                foreColor: "#ccc",
+                brush: {
+                    target: "chart2",
+                    enabled: true
+                },
+                selection: {
+                    enabled: true,
+                    fill: {
+                        color: "#fff",
+                        opacity: 0.4
+                    },
+                    xaxis: {
+                        min: new Date("27 Jul 2017 10:00:00").getTime(),
+                        max: new Date("14 Aug 2017 10:00:00").getTime()
+                    }
+                }
+            },
+            colors: ["#FF0080"],
+            series: [
+                {
+                    data: data
+                }
+            ],
+            stroke: {
+                width: 2
+            },
+            grid: {
+                borderColor: "#444"
+            },
+            markers: {
+                size: 0
+            },
+            xaxis: {
+                type: "datetime",
+                tooltip: {
+                    enabled: false
+                }
+            },
+            yaxis: {
+                tickAmount: 2
+            }
+        };
+
+        var chart2 = new ApexCharts(document.querySelector("#chart-bar"), options2);
+
+        chart2.render();
+
+        function generateDayWiseTimeSeries(baseval, count, yrange) {
+            var i = 0;
+            var series = [];
+            while (i < count) {
+                var x = baseval;
+                var y =
+                    Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+                series.push([x, y]);
+                baseval += 86400000;
+                i++;
+            }
+            return series;
+        }
+
+    </script>
+
+    <script>
+     var options = {
+          series: [44, 55, 13, 33],
+          chart: {
+          width: 320,
+          type: 'donut',
+        },
+        dataLabels: {
+          enabled: false
+        },
+        responsive: [{
+          breakpoint: 380,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              show: false
+            }
+          }
+        }],
+        legend: {
+          position: 'right',
+          offsetX: 0,
+          height: 230,
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+        function appendData() {
+        var arr = chart.w.globals.series.slice()
+        arr.push(Math.floor(Math.random() * (100 - 1 + 1)) + 1)
+        return arr;
+      }
+      
+      function removeData() {
+        var arr = chart.w.globals.series.slice()
+        arr.pop()
+        return arr;
+      }
+      
+      function randomize() {
+        return chart.w.globals.series.map(function() {
+            return Math.floor(Math.random() * (100 - 1 + 1)) + 1
+        })
+      }
+      
+      function reset() {
+        return options.series
+      }
+      
+      document.querySelector("#randomize").addEventListener("click", function() {
+        chart.updateSeries(randomize())
+      })
+      
+      document.querySelector("#add").addEventListener("click", function() {
+        chart.updateSeries(appendData())
+      })
+      
+      document.querySelector("#remove").addEventListener("click", function() {
+        chart.updateSeries(removeData())
+      })
+      
+      document.querySelector("#reset").addEventListener("click", function() {
+        chart.updateSeries(reset())
+      })
+    </script>
+
+    <script>
+        var options1 = {
+  chart: {
+    height: 130,
+    type: "radialBar",
+  },
+  series: [87],
+  colors: ["#702dff"],
+  plotOptions: {
+    radialBar: {
+      startAngle: -135,
+      endAngle: 135,
+      track: {
+        background: '#333',
+        startAngle: -135,
+        endAngle: 135,
+      },
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          fontSize: "1rem",
+          show: true
+        }
+      }
+    }
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "dark",
+      type: "horizontal",
+      gradientToColors: ["#f39c12"],
+      stops: [0, 100]
+    }
+  },
+  stroke: {
+    lineCap: "butt"
+  },
+  labels: ["Progress"]
+};
+
+new ApexCharts(document.querySelector("#chart1"), options1).render();
+
+var options2 = {
+  chart: {
+    height: 130,
+    type: "radialBar",
+  },
+  series: [67],
+  colors: ["#9b59b6"],
+  plotOptions: {
+    radialBar: {
+      startAngle: -90,
+      endAngle: 90,
+      track: {
+        background: '#3498db',
+        startAngle: -90,
+        endAngle: 90,
+      },
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          fontSize: "1rem",
+          show: true
+        }
+      }
+    }
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "dark",
+      type: "horizontal",
+      gradientToColors: ["#f39c12"],
+      stops: [0, 100]
+    }
+  },
+  stroke: {
+    lineCap: "butt"
+  },
+  labels: ["Progress"]
+};
+
+new ApexCharts(document.querySelector("#chart2"), options2).render();
+
+var options3 = {
+  chart: {
+    height: 130,
+    type: "radialBar",
+  },
+  series: [43],
+  colors: ["#20E647"],
+  plotOptions: {
+    radialBar: {
+      startAngle: -45,
+      endAngle: 45,
+      track: {
+        background: '#9b59b6',
+        startAngle: -45,
+        endAngle: 45,
+      },
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          fontSize: "1rem",
+          show: true
+        }
+      }
+    }
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "dark",
+      type: "horizontal",
+      gradientToColors: ["#702dff"],
+      stops: [0, 100]
+    }
+  },
+  stroke: {
+    lineCap: "butt"
+  },
+  labels: ["Progress"]
+};
+
+new ApexCharts(document.querySelector("#chart3"), options3).render();
+
+    </script>
+    
 </body>
 
 </html>
